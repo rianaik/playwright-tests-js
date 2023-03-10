@@ -41,6 +41,23 @@ Now setup browsers:
      You will get screenshot after running tests inside screenshots/ directory
 
 
+### Github Actions:
+
+Everytime you push, it will run all tests from amazon directory in 3 browsers.
+After action is completed, You can have screenshots and playwright report in github artifacts
+
+#### How to download artifacts
+
+1. Go to https://github.com/rianaik/playwright-tests-js/actions , you will see following screen:
+
+
+![](.doc/Action.png?raw=true)
+
+2. Now click on latest action and you will see following screen:
+
+![](.doc/Artifact.png?raw=true)
+
+3. Now you can download playwright-report or screenshots 
 
 
 ## Integrate with vscode (recommended)
