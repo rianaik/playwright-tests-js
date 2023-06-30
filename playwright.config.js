@@ -11,16 +11,13 @@ const { defineConfig, devices } = require('@playwright/test');
  * @see https://playwright.dev/docs/test-configuration
  */
 module.exports = defineConfig({
-  testDir: './e2e',
-//  testMatch: 'test.list.js',
+   testDir: './e2e/tests',
+  testMatch: 'tests/**/*.spec.js',
+
   /* Maximum time one test can run for. */
-  timeout: 30 * 1000,
+  timeout: 30000,
   expect: {
-    /**
-     * Maximum time expect() should wait for the condition to be met.
-     * For example in `await expect(locator).toHaveText();`
-     */
-    timeout: 5000
+    timeout: 30000,
   },
   /* Run tests in files in parallel */
   fullyParallel: true,

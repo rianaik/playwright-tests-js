@@ -21,15 +21,15 @@ Now setup browsers:
 
 #### To run tests in all browsers (headless mode)
 
-        npx playwright test amazon/ 
+        npx playwright test thrive/ 
 
 #### To run tests in all browsers (debug: with browser-ui)
 
-        npx playwright test amazon/ --debug 
+        npx playwright test thrive/ --debug 
 
 #### To run tests in single browser 
 
-        npx playwright test amazon/ --project chromium  (you can replace chromium with edge or firefox)
+        npx playwright test thrive/ --project chromium  (you can replace chromium with edge or firefox)
 
 #### Check results with report and [trace](https://playwright.dev/docs/trace-viewer) data (Should run this after running tests, if doesnt happen automatically) 
 
@@ -50,39 +50,25 @@ Now setup browsers:
 
 ## Directory structure
 
+- POM (Page Object Model)
 - All test cases are inside e2e directory
 - e2e has one directory per module/app  ( e.g. amazon has its own directory named "amazon")
 - Each app directory contains atleast two files:
 
-    - test.list.js (Here we define in which sequence we want to run all test cases)
-    - mytestcase.spec.js (This contains multiple test cases) -- You can have as many test spec files as you need, You only need to add it into test.list.js
-
-
-## Setup new app
-
-- Lets say you want to create tests cases for app named "Flipkart"
-- Copy e2e/exampleapp directory to e2e/flipkart (all lower case letters, No special charactors or space)
-- Now inside flipkart:
-    - rename example1/2.spec.js to your desired name
-    - add it to test.list.js
-- To run your test cases from commandline:
-
-        cd playwright-tests-js
-        npx playwright test flipkart/  
-
-
-
+    - index.js
+    - mytestcase.spec.js 
+- A page object represents a part of your web application. An e-commerce web application might have a home page, a listings page and a checkout page. Each of them can be represented by page object models.
 
 ## Generate code
 
         cd playwright-tests-js
-        npx playwright codegen https://amazon.in (You can replace amazon.in with your desired URL)
+        npx playwright codegen "[URL]"(You can replace [URL] with your desired URL)
 
 
 
 ## Github Actions:
 
-Everytime you push, it will run all tests from amazon directory in 3 browsers.
+Everytime you push, it will run all tests from tests directory in 3 browsers.
 After action is completed, You can have screenshots and playwright report in github artifacts
 
 #### How to download artifacts
