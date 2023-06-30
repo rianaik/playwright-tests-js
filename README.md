@@ -52,7 +52,7 @@ Now setup browsers:
 
 - POM (Page Object Model)
 - All test cases are inside e2e directory
-- e2e has one directory per module/app  ( e.g. amazon has its own directory named "amazon")
+- e2e has one directory per module/app  ( e.g. Thrive has its own directory named "thrive")
 - Each app directory contains atleast two files:
 
     - index.js
