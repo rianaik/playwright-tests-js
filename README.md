@@ -17,7 +17,7 @@ Now setup browsers:
         npx playwright install msedge
         npx playwright install-deps (Only for Ubuntu users)
 
-## Run tests for amazon
+## Run tests
 
 #### To run tests in all browsers (headless mode)
 
